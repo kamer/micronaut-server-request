@@ -18,10 +18,16 @@ public class User {
 
 	private static final Logger log = LoggerFactory.getLogger(User.class);
 
-	String fullName;
+	String name;
+	String surname;
+	Map<String, String> attributes;
+	String[] whitelist;
 
-	public User(@JsonProperty("name") String name, @JsonProperty("surname") String surname, @JsonProperty("attributes") Map<String, String> attributes) {
-		this.fullName = name + " " + surname;
+	public User(String name, String surname, Map<String, String> attributes, String[] whitelist) {
+		this.name = name;
+		this.surname = surname;
+		this.attributes = attributes;
+		this.whitelist = whitelist;
 
 		final Optional<HttpRequest<Object>> httpRequest = ServerRequestContext.currentRequest();
 		if (httpRequest.isEmpty()) {

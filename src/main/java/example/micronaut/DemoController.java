@@ -17,7 +17,7 @@ public class DemoController {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public HttpResponse<User> demo(@Body User user) {
-		log.info("User {} received.", user.fullName);
+		log.info("User {} received.", user.name);
 		return HttpResponse.ok();
 	}
 }
