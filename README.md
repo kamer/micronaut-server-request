@@ -1,3 +1,5 @@
+Reproducer for https://github.com/micronaut-projects/micronaut-core/issues/10665
+
 # Reproduction steps
 - Run project.
 - Send the request below:
