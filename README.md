@@ -29,7 +29,7 @@ curl --location --request POST 'localhost:8080/demo' \
 }'
 ```
 - Look at the logs. You should see "HttpRequest empty" error log.
-- Same request with shorter json will also work without error. Restart the application and send request below:
+- Same request with shorter json will work without error. Restart the application and send request below:
 ```shell
 curl --location --request POST 'localhost:8080/demo' \
 --header 'Content-Type: application/json' \
